@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  background-image: url(https://scx2.b-cdn.net/gfx/news/hires/2019/4-space.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.header .overlay {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+}
+.header .overlay a {
+  color: white;
+  font-weight: normal;
+  font-size: 70px;
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .header .overlay a {
+    font-size: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .header .overlay a {
+    font-size: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .header .overlay a {
+    font-size: 40px;
+  }
+}
+
+.main {
+  background-color: #f8f8f8;
+  box-shadow: 0px 0px 35px black;
+  padding: 45px 0;
+}
+.main .note {
+  display: block;
+}
+.main .note .content {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #f0f793;
+  padding: 15px;
+}
+@media (max-width: 1030px) {
+  .main .note .content {
+    width: calc(100% - 30px);
+  }
+}
+.main .note .content h1 {
+  margin: 0 0 10px 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+@media (max-width: 700px) {
+  .main .note .content h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 575px) {
+  .main .note .content h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 400px) {
+  .main .note .content h1 {
+    font-size: 28px;
+  }
+}
+.main .note .content ul {
+  margin: 0;
+  padding: 0 0 0 30px;
+  font-size: 20px;
+}
+@media (max-width: 700px) {
+  .main .note .content ul {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .main .note .content ul {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .main .note .content ul {
+    font-size: 14px;
+  }
+}
+.main .note .content ul li:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.main .status {
+  display: none;
+}
+.main .status .content {
+  width: 1000px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #c0f793;
+  padding: 15px;
+}
+@media (max-width: 1030px) {
+  .main .status .content {
+    width: calc(100% - 30px);
+  }
+}
+.main .status .content h1 {
+  margin: 0 0 10px 0;
+  font-size: 40px;
+  font-weight: normal;
+}
+@media (max-width: 700px) {
+  .main .status .content h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 575px) {
+  .main .status .content h1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 400px) {
+  .main .status .content h1 {
+    font-size: 28px;
+  }
+}
+.main .status .content p {
+  margin: 0;
+  font-size: 20px;
+}
+@media (max-width: 700px) {
+  .main .status .content p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .main .status .content p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .main .status .content p {
+    font-size: 14px;
+  }
+}
+.main .status .content p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+.main .form .content {
+  width: 1000px;
+  margin: auto;
+  padding: 0 15px;
+}
+@media (max-width: 1030px) {
+  .main .form .content {
+    width: calc(100% - 30px);
+  }
+}
+.main .form .content .input {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto;
+  gap: 20px;
+}
+@media (max-width: 500px) {
+  .main .form .content .input {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.main .form .content .input input {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  background-color: #e9e9e9;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+  border-bottom: 2.5px solid #f8f8f8;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+.main .form .content .input input:hover {
+  background-color: #f1f1f1;
+}
+.main .form .content .input input:focus {
+  transition: none;
+  background-color: #f8f8f8;
+  border-bottom: 2.5px solid #e9e9e9;
+}
+@media (max-width: 700px) {
+  .main .form .content .input input {
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .main .form .content .input input {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .main .form .content .input input {
+    font-size: 18px;
+  }
+}
+.main .form .content .input input[type=email] {
+  grid-column: 1/3;
+}
+.main .form .content .input input[type=number] {
+  grid-column: 1/3;
+}
+.main .form .content .sgo {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  margin: 20px 0;
+}
+@media (max-width: 700px) {
+  .main .form .content .sgo {
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .main .form .content .sgo {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .main .form .content .sgo {
+    font-size: 18px;
+  }
+}
+.main .form .content .sgo label {
+  cursor: pointer;
+}
+.main .form .content .sgo label span {
+  margin-left: 10px;
+}
+.main .form .content .submit {
+  text-align: center;
+}
+.main .form .content .submit input {
+  font-size: 24px;
+  margin: 20px 0;
+  outline: none;
+  border: none;
+  border-radius: 24px;
+  padding: 5px 10px;
+  background-color: #e9e9e9;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main .form .content .submit input:hover {
+  background-color: black;
+  color: white;
+}
+.main .form .content .submit input:active {
+  transition: none;
+  background-color: #e9e9e9;
+  color: black;
+}
+@media (max-width: 700px) {
+  .main .form .content .submit input {
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .main .form .content .submit input {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .main .form .content .submit input {
+    font-size: 18px;
+  }
+}
+
+.footer {
+  background-image: url(https://scx2.b-cdn.net/gfx/news/hires/2019/4-space.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.footer .overlay {
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 700px) {
+  .footer .overlay {
+    font-size: 14px;
+  }
+}
+@media (max-width: 575px) {
+  .footer .overlay {
+    font-size: 12px;
+  }
+}
+@media (max-width: 400px) {
+  .footer .overlay {
+    font-size: 10px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
