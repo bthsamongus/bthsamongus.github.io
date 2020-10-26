@@ -402,6 +402,40 @@ body {
   padding: 5px 0;
   padding-right: 30px;
 }
+.main .info .logs table th button, .main .info .logs table td button, .main .info .entries table th button, .main .info .entries table td button {
+  font-size: 20px;
+  background-color: #a8a6a6;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+  outline: none;
+  border: none;
+  padding: 0 5px;
+}
+.main .info .logs table th button:hover, .main .info .logs table td button:hover, .main .info .entries table th button:hover, .main .info .entries table td button:hover {
+  background-color: black;
+  color: white;
+}
+.main .info .logs table th button:active, .main .info .logs table td button:active, .main .info .entries table th button:active, .main .info .entries table td button:active {
+  transition: none;
+  background-color: #e9e9e9;
+  color: black;
+}
+@media (max-width: 700px) {
+  .main .info .logs table th button, .main .info .logs table td button, .main .info .entries table th button, .main .info .entries table td button {
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .main .info .logs table th button, .main .info .logs table td button, .main .info .entries table th button, .main .info .entries table td button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .main .info .logs table th button, .main .info .logs table td button, .main .info .entries table th button, .main .info .entries table td button {
+    font-size: 14px;
+  }
+}
 .main .info .logs table {
   min-width: 700px;
 }
