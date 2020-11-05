@@ -4,34 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTHS Among Us</title>
-    <link rel="stylesheet" href="lib/styles/build/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="lib/styles/build/body.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
-
-    <!-- SCRIPTS -->
-    <!-- <script src="http://cdn.date-fns.org/v1.0.0/date_fns.min.js"></script> -->
-    <script src="lib/scripts/main.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+    <script src="lib/scripts/nav.min.js" defer></script>
+    <script src="lib/scripts/auth.min.js" defer></script>
+    <script src="lib/scripts/form.min.js" defer></script>
 </head>
 <body>
     <section class="header">
-        <div class="overlay">
-            <a href="..">bths among us</a>
+        <div id="auth">
+            <div><span>Currently logged in.</span></div>
+            <div><span>Log Out</span></div>
         </div>
+        <div class="title">
+            <div class="logo">
+                <a href="">
+                    <img src="assets/logo.png" alt="bths among us logo">
+                    <span>BTHS Among Us</span>
+                </a>
+            </div>
+            <div class="nav">
+                <a href=".."><span>Home</span></a>
+                <a href="../attendance/"><span>Attendance</span></a>
+                <a href="."><span>Executives</span></a>
+                <a id="nav" href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="hamburger icon"></a>
+            </div>
+            <div id="mobile">
+                <a href=".."><span>Home</span></a>
+                <a href="../attendance/"><span>Attendance</span></a>
+                <a href="."><span>Executives</span></a>
+            </div>
+        </div>
+        <div class="welcome"><span>Executive Portal</span></div>
     </section>
     <section class="main">
-        <section class="auth"></section>
+        <section class="login">
+            <h1>Login</h1>
+            <div id="form"></div>
+        </section>
         <section class="info">
-            <span>LmaoooOO HIII</span>
+            <h1>Panel</h1>
+            <div id="infoContent">
+                <section id="entries">
+                    <section class="entry">
+                        <h1>Yangfa Wu</h1>
+                        <div class="content">
+                            <p>osis: 218513760</p>
+                            <p>email: yangfaw@nycstudents.net</p>
+                            <p>date: Tues Nov 2</p>
+                        </div>
+                        <div class="choices">
+                            <span>reject</span>
+                            <span>accept</span>
+                        </div>
+                    </section>
+                </section>
+                <section id="members"></section>
+            </div>
         </section>
     </section>
     <section class="footer">
-        <div class="overlay">
-            &copy; Copyright 2020, BTHS Among Us. All rights reserved.
-        </div>
+        <p>&copy; Copyright 2020, BTHS Among Us. All rights reserved.</p>
     </section>
 </body>
 </html>

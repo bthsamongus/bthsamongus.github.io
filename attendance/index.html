@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTHS Among Us</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="lib/styles/build/body.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-database.js"></script>
+    <script src="lib/scripts/nav.min.js" defer></script>
+    <script src="lib/scripts/auth.min.js" defer></script>
+    <script src="lib/scripts/form.min.js" defer></script>
+</head>
+<body>
+    <section class="header">
+        <div id="auth">
+            <div><span>Currently logged in.</span></div>
+            <div><span>Log Out</span></div>
+        </div>
+        <div class="title">
+            <div class="logo">
+                <a href="">
+                    <img src="assets/logo.png" alt="bths among us logo">
+                    <span>BTHS Among Us</span>
+                </a>
+            </div>
+            <div class="nav">
+                <a href=".."><span>Home</span></a>
+                <a href="."><span>Attendance</span></a>
+                <a href="../execs"><span>Executives</span></a>
+                <a id="nav" href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="hamburger icon"></a>
+            </div>
+            <div id="mobile">
+                <a href=".."><span>Home</span></a>
+                <a href="."><span>Attendance</span></a>
+                <a href="../execs"><span>Executives</span></a>
+            </div>
+        </div>
+        <div class="welcome"><span>Club Attendance</span></div>
+    </section>
+    <section class="main">
+        <section class="form">
+            <h1>Form</h1>
+            <div id="form"></div>
+        </section>
+        <section class="notes">
+            <h1>Notes</h1>
+            <div>
+                <p>Club members need to fill out an Attendance form every time they attend a club meeting on Zoom.</p>
+                <p>Attendance forms are only accepted when our inbox is open. You will be notified if we are currently not accepting forms when you try to submit one.</p>
+                <p>Club members are required to attend the Zoom meeting for their Attendance form to be valid. Filling out the form and not attending the meeting will not get you credit.</p>
+                <p>Scroll down to <b>FAQ</b> to see more!</p>
+            </div>
+        </section>
+        <section class="faq">
+            <h1>FAQ</h1>
+            <div>
+                <p>
+                    <h2># What happens if I submit another form?</h2>
+                    <p>Your form will land inside our inbox and our executives will review it like any other attendance form. Sending duplicate forms won't result in duplicate credits.</p>
+                </p>
+                <p>
+                    <h2># What to do if I accidentally entered the wrong information on the form?</h2>
+                    <p>If your OSIS was entered correctly, just submit another attendance form using that OSIS and the correct information. The system will automatically fix your earlier mistake.</p>
+                </p>
+                <p>
+                    <h2># What is the deadline for attendance forms?</h2>
+                    <p>Every meeting, executives will open up our inbox and allow people to submit in attendance forms. Starting at the time executives opened our inbox, you have until 11:59 PM on the same day to submit your attendance.</p>
+                </p>
+                <p>
+                    <h2># Why do I need to enter my NYCDOE email?</h2>
+                    <p>You can currently only join our Zoom meetings using yur NYCDOE email. We award credit to people by matching emails we found Zoom to emails submitted on the forms.</p>
+                </p>
+                <p>
+                    <h2># Do I need to submit an attendance form on Thursday if I already submitted one for the Tuesday meeting that I attended this week?</h2>
+                    <p>If you are certain that you attended Tuesday's meeting and submitted an attendance form for that day, then you don't have to submit an attendance form for Thursday's meeting on the same week. If not, just submit another form.</p>
+                </p>
+                <p>
+                    <h2># Why isn't the form working for me even though it's working for others?</h2>
+                    <p>Try refreshing your browser. If that doesn't fix anything, try another browser if you have another one. If that still doesn't fix anything or doesn't apply to you, try another device if you have another one. If you have another device or the issue is still not resolved, email us or DM us on our Discord Server.</p>
+                </p>
+                <p>
+                    <h2># How can I make sure that my form was really submitted?</h2>
+                    <p>If you are feeling anxious and you do not trust the system, feel free to email us or DM us on our Discord Server, and we will tell you what we see on our side.</p>
+                </p>
+            </div>
+        </section>
+    </section>
+    <section class="footer">
+        <p>&copy; Copyright 2020, BTHS Among Us. All rights reserved.</p>
+    </section>
+</body>
+</html>

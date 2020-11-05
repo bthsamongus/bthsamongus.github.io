@@ -4,93 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTHS Among Us</title>
-    <link rel="stylesheet" href="lib/styles/build/main.css">
-    <link rel="stylesheet" href="lib/styles/build/fontawesome-free-5.15.1-web/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="lib/styles/build/body.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- SCRIPTS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="lib/scripts/main.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="lib/scripts/nav.min.js" defer></script>
+    <script src="lib/scripts/auth.min.js" defer></script>
 </head>
 <body>
     <section class="header">
-        <div class="overlay">
-            <div class="text">
-                <h1>bths among us</h1>
-                <div>
-                    <a href="./signin">sign in</a>
-                    <a href="./execs">execs</a>
-                </div>
+        <div id="auth">
+            <div><span>Currently logged in.</span></div>
+            <div><span>Log Out</span></div>
+        </div>
+        <div class="title">
+            <div class="logo">
+                <a href="">
+                    <img src="assets/logo.png" alt="bths among us logo">
+                    <span>BTHS Among Us</span>
+                </a>
             </div>
-            <div class="indicator">
-                <img src="assets/down_arrow.png" alt="down_arrow">
+            <div class="nav">
+                <a href=""><span>Home</span></a>
+                <a href="./attendance"><span>Attendance</span></a>
+                <a href="./execs"><span>Executives</span></a>
+                <a id="nav" href="javascript:void(0)"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1200px-Hamburger_icon.svg.png" alt="hamburger icon"></a>
+            </div>
+            <div id="mobile">
+                <a href=""><span>Home</span></a>
+                <a href="./attendance"><span>Attendance</span></a>
+                <a href="./execs"><span>Executives</span></a>
             </div>
         </div>
+        <div class="welcome"><span>Saw you at Electrical</span></div>
     </section>
     <section class="main">
         <section class="info">
-            <div class="content">
-                <h1>we are bths among us</h1>
-                <p>
-                    This is where students at Brooklyn Tech can interact with other students through the online game Among Us! Everyone gets to make new friends and find new people to play with outside of school hours. 
-                </p>
-                <p>
-                    We meet on Tuesdays 3:30 - 4:30 PM and Thursdays 2:30 -3:30 PM on Zoom every other week. Members are only required to attend at least one meeting every week we meet for full attendance credit for that week. They are allowed to attend both if they want, but there won't be any extra credit.
-                </p>
+            <h1>Info</h1>
+            <div>
+                <p>At BTHS Among Us, students at Brooklyn Tech bring their gamer instinct, pursuasion skills, and mischeviousness to the table. May the craftiest, luckiest, sneakiest crewmates and impostors emerge victorious in a galaxy far, far away! Without the need of knowing anyone in our club, come find your destined friends and matches in our community of social detectives - and impostors!</p>
+                <p>We meet biweekly on Tuesdays and Thursdays on Zoom! <b>3:30 - 4:30 PM on Tuesdays</b>. <b>2:30 - 3:30 PM on Thursdays</b>. Members are only required to join one meeting on every week that we meet for full credit! If you are really bored, you are totally allowed to attend both meetings on the same week - but you won't get extra credit!</p>
+            </div>
+        </section>
+        <section class="stats">
+            <h1>Stats</h1>
+            <div>
+                <p><b>370+</b><span>members on GClassroom</span></p>
+                <p><b>260+</b><span>members on Discord</span></p>
+                <p><b>200+</b><span>concurrent Zoom attenders</span></p>
+                <p><b>560+</b><span>followers on Instagram</span></p>
             </div>
         </section>
         <section class="quick">
-            <div class="recruit">
-                <div class="content">
-                    <div><span>want to be among us?</span></div>
-                    <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSe4DpIlmUg6Cgf2oamwF2x70udsmihboSMeQa4pPI7ObeTcVg/viewform" target="_blank"><span>join</span><i class="fas fa-external-link-alt"></i></a></div>
+            <h1>Links</h1>
+            <div>
+                <div>
+                    <p>Why are you not in our club?</p>
+                    <a href="">Join Club</a>
                 </div>
-            </div>
-            <div class="attendance">
-                <div class="content">
-                    <div><span>here for attendance?</span></div>
-                    <div><a href="./signin"><span>sign in</span><i class="fas fa-external-link-alt"></i></a></div>
+                <div>
+                    <p>Why haven't you done your attendance?</p>
+                    <a href="./attendance">Do It</a>
                 </div>
-            </div>
-            <div class="executive">
-                <div class="content">
-                    <div><span>performing exec duty?</span></div>
-                    <div><a href="./execs"><span>work</span><i class="fas fa-external-link-alt"></i></a></div>
+                <div>
+                    <p>We got an Instagram, you know?</p>
+                    <a href="">Check It Out</a>
                 </div>
-            </div>
-        </section>
-        <section class="media">
-            <div class="overlay">
-                <div class="content">
-                    <h1>connect with us</h1>
-                    <div>
-                        <a href="mailto:bthsamongus@gmail.com" target="_blank"><img src="assets/gmail_logo.png" alt="gmail"></a>
-                        <a href="https://www.instagram.com/bthsamongus/" target="_blank"><img src="assets/instagram_logo.png" alt="instagram"></a>        
-                        <a href="https://discord.gg/YdX5Ta7" target="_blank"><img src="assets/discord_logo.png" alt="discord"></a>
-                    </div>
+                <div>
+                    <p>We got a Discord server too!</p>
+                    <a href="">Join Server</a>
+                </div>
+                <div>
+                    <p>SMH execs, do your jobs.</p>
+                    <a href="./execs">Do My Job</a>
                 </div>
             </div>
         </section>
-        <section class="footer">
-            <div class="overlay">
-                &copy; Copyright 2020, BTHS Among Us. All rights reserved.
+        <section class="execs">
+            <h1>Execs</h1>
+            <div>
+                <div>
+                    <h2>President - Tina Or</h2>
+                    <p>Mathematics Major 2022</p>
+                </div>
+                <div>
+                    <h2>Co-President - Wilson Lu</h2>
+                    <p>Software Engineering Major 2021</p>
+                </div>
+                <div>
+                    <h2>Vice President - Jessica Chen</h2>
+                    <p>Civil Engineering Major 2022</p>
+                </div>
+                <div>
+                    <h2>Co-Vice President - Ashfak Uddin</h2>
+                    <p>Software Engineering Major 2021</p>
+                </div>
+                <div>
+                    <h2>Secretary - Terrence Li</h2>
+                    <p>Mechatronics Major 2022</p>
+                </div>
+                <div>
+                    <h2>Secretary - David Yeung</h2>
+                    <p>Software Engineering Major 2021</p>
+                </div>
+                <div>
+                    <h2>Treasurer - Yangfa Wu</h2>
+                    <p>Software Engineering Major 2021</p>
+                </div>
+                <div>
+                    <h2>Creative Coordinator - Ada Wang</h2>
+                    <p>Media Major 2022</p>
+                </div>
+                <div>
+                    <h2>Creative Coordinator - Carmen Kwong</h2>
+                    <p>Law and Society Major 2022</p>
+                </div>
+                <div>
+                    <h2>Tuesday Advisor - Ms. Ferguson</h2>
+                    <p>English Department</p>
+                </div>
+                <div>
+                    <h2>Thursday Advisor - Ms. Doherty</h2>
+                    <p>Computer Science & Engineering Department</p>
+                </div>
             </div>
         </section>
-		<section id="loadedImages" style="display: none;">
-            <img src="assets/characters/black.png" alt="black">
-            <img src="assets/characters/blue.png" alt="blue">
-            <img src="assets/characters/brown.png" alt="brown">
-            <img src="assets/characters/cyan.png" alt="cyan">
-            <img src="assets/characters/darkgreen.png" alt="darkgreen">
-            <img src="assets/characters/grey.png" alt="grey">
-            <img src="assets/characters/lightgreen.png" alt="lightgreen">
-            <img src="assets/characters/orange.png" alt="orange">
-            <img src="assets/characters/pink.png" alt="pink">
-            <img src="assets/characters/purple.png" alt="purple">
-            <img src="assets/characters/red.png" alt="red">
-            <img src="assets/characters/white.png" alt="white">
-            <img src="assets/characters/yellow.png" alt="yellow">
+        <section class="updates">
+            <h1>Log</h1>
+            <div>
+                <p>What has the Treasurer done to the website?</p>
+                <section class="log">
+                    <section>
+                        <h2>Patch 2.0</h2>
+                        <p>Home page revamped.</p>
+                    </section>
+                    <section>
+                        <h2>Patch 1.0</h2>
+                        <p>Created home page.</p>
+                        <p>Added attendance page.</p>
+                        <p>Added executive portal.</p>
+                    </section>
+                </section>
+            </div>
         </section>
+    </section>
+    <section class="footer">
+        <p>&copy; Copyright 2020, BTHS Among Us. All rights reserved.</p>
     </section>
 </body>
 </html>
